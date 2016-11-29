@@ -25,7 +25,7 @@ class BankTest < MiniTest::Test
   end
 
   def test_total_cash_in_bank
-    total_cash = total_cash_in_bank('total', @accounts)
+    total_cash = total_cash_in_bank(@accounts)
     assert_equal(7311, total_cash)
   end
 
@@ -54,7 +54,7 @@ class BankTest < MiniTest::Test
   end
 
   def test_name_of_largest_value_account_holder
-    name_account_holder = highest_value_account_holder_name("all", @accounts)
+    name_account_holder = highest_value_account_holder_name(@accounts) # class -- Passing only one param as set as default=nil
     assert_equal("Sandy", name_account_holder)
   end
 
